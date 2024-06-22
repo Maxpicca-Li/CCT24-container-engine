@@ -145,7 +145,7 @@ int child_func() {
 int main(int argc, char *argv[]) {
     // 参数设置
     if (argc != 4) {
-        fprintf(stderr, "Usage: %s <root_fs> <container_name> <container_ip>", argv[0]);
+        fprintf(stderr, "Usage: sudo %s <root_fs> <container_name> <container_ip>", argv[0]);
         return EXIT_FAILURE;
     }
     root_fs = argv[1];

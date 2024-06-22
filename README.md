@@ -100,7 +100,7 @@ rtt min/avg/max/mdev = 0.045/0.099/0.169/0.052 ms
 1. 先将 stress_test.sh 测试脚本复制到rootfs中。也可以用C写一个cpu、memory的压力程序进行测试，这里我下载的是最简rootfs，不含gcc，故使用 shell 脚本实现。
 
 ```shell
-cp test/stress_test.sh <your_rootfs_path>/home/
+$ cp test/stress_test.sh <your_rootfs_path>/home/
 ```
 
 2. 进入容器，进行压力测试
@@ -130,8 +130,8 @@ Terminated
 在两个bash中分别执行以下命令：
 
 ```shell
-sudo ./container_engine <your_rootfs_path> centos1 192.168.1.2
-sudo ./container_engine <your_rootfs_path> centos2 192.168.1.3
+$ sudo ./container_engine <your_rootfs_path> centos1 192.168.1.2
+$ sudo ./container_engine <your_rootfs_path> centos2 192.168.1.3
 ```
 
 测试如下：
@@ -153,7 +153,6 @@ $ bash container.sh <your_rootfs_path> centos1 192.168.1.2
 
 ```shell
 $ bash cgroup.sh set centos1
-[sudo] password for maxpicca: 
 50000 100000
 52428800
 878726
@@ -169,7 +168,7 @@ CGROUP CLEAN DONE.
 
 
 
-**测试：**同上，不再赘述。
+**测试**：同上，不再赘述。
 
 ### step3: 环境清除
 
